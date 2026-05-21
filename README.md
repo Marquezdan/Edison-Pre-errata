@@ -37,9 +37,9 @@ This repository include files such as:
 
 ```text
 cards-unofficial.cdb
-script/c29071342.lua
-script/c12538375.lua
-lflists/2010.03 Edison.lflist.conf
+c29071342.lua
+c12538375.lua
+2010.03 Edison.lflist.conf
 12538375.jpg
 29071342.jpg
 ```
@@ -52,7 +52,7 @@ Typical paths:
 
 ```text
 cards-unofficial.cdb  ->  ProjectIgnis/expansions/cards-unofficial.cdb
-.lua scripts          ->  ProjectIgnis/expansions/script/
+.lua scripts          ->  ProjectIgnis/script/pre-errata
 .lflist.conf          ->  ProjectIgnis/lflists/
 card images           ->  ProjectIgnis/pics/
 ```
