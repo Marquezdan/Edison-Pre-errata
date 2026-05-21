@@ -85,6 +85,8 @@ These files were tested on version 41.0.2 "Bagooska" of EDOPro.
 
 It's very likely that when you update EDOPro you will have to add those files again, so keep them.
 
+Right now i keeped both of the versions, the modern and the errata of the cards, while more test are made with the errata versions, if you wanna duel random players you will probably need to use the non-errata version of the cards.
+
 
 
 ## Current status
