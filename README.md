@@ -41,7 +41,7 @@ c29071342.lua
 c12538375.lua
 2010.03 Edison.lflist.conf
 12538375.jpg
-29071342.jpg
+29071342.png
 ```
 
 ## Installation
