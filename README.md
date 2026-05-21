@@ -33,14 +33,15 @@ This is relevant for interactions such as:
 
 ## Files
 
-This repository may include files such as:
+This repository include files such as:
 
 ```text
 cards-unofficial.cdb
 script/c29071342.lua
 script/c12538375.lua
 lflists/2010.03 Edison.lflist.conf
-pics/
+12538375.jpg
+29071342.jpg
 ```
 
 ## Installation
