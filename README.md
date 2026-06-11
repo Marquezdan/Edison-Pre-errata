@@ -24,6 +24,13 @@ This is relevant for interactions such as:
 - Treeborn Frog being tributed during the Standby Phase
 - Treeborn Frog being destroyed after being Special Summoned during standby phase
 
+### Lord British Space Fighter
+
+Adds a custom pre-errata version of **Lord British Space Fighter**.
+
+This version lets Lord British attack more than a second time, if the player select the first option of doing an additional attack.
+
+
 ## Custom card IDs
 
 ```text
