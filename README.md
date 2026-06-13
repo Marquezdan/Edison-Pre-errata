@@ -1,110 +1,80 @@
-# EDOPro Edison Format Pre-Errata Fixes
+# Edison Pre-Errata Card Pack
 
-This repository provides a small set of custom files for **EDOPro / Project Ignis** to improve support for selected **Edison Format pre-errata interactions**.
+This repository contains a custom EDOPro/ProjectIgnis card pack focused on Edison-format pre-errata cards and Time Wizard testing.
 
-This project was originally forked from **Geekoryuiai**, who provided the initial **Armory Arm (Pre-Errata)** implementation for Edison Format. This fork keeps that contribution and adds a new **Treeborn Frog (Pre-Errata)** implementation(more cards will be added in near future).
+The goal is to provide playable versions of selected cards as they worked during the Edison era, using custom card IDs, scripts, images, and a compatible banlist.
 
-## Included fixes
+## Current Cards
 
-### Armory Arm (Pre-Errata)
+The current pack includes:
 
-Adds a custom pre-errata version of **Armory Arm** for Edison Format.
+* **Treeborn Frog (Pre-Errata)**
+  Custom ID: `12538375`
 
-This version is intended to preserve the historical Edison behavior, including the interaction with **Colossal Fighter**.
+* **Armory Arm (Pre-Errata)**
+  Custom ID: `29071342`
 
-### Treeborn Frog (Pre-Errata)
+* **Lord British Space Fighter (Pre-Errata)**
+  Custom ID: `90000003`
 
-Adds a custom pre-errata version of **Treeborn Frog**.
+These cards are intended to preserve specific historical interactions that are not represented correctly by their modern official card versions.
 
-In Edison Format, **Treeborn Frog does not have a once-per-turn restriction**. During the same Standby Phase, if Treeborn Frog returns to the Graveyard and its activation conditions are still met, it may activate again.
-
-This is relevant for interactions such as:
-
-- Treeborn Frog being negated by **Royal Oppression**
-- Treeborn Frog being tributed during the Standby Phase
-- Treeborn Frog being destroyed after being Special Summoned during standby phase
-
-### Lord British Space Fighter
-
-Adds a custom pre-errata version of **Lord British Space Fighter**.
-
-This version lets Lord British attack more than a second time, if the player select the first option of doing an additional attack.
-
-
-## Custom card IDs
+## Repository Structure
 
 ```text
-29071342 - Armory Arm (Pre-Errata)
-12538375 - Treeborn Frog (Pre-Errata)
-```
+expansions/
+└── cards-unofficial.cdb
 
-## Files
+script/
+└── pre-errata/
+    ├── c12538375.lua
+    ├── c29071342.lua
+    └── c90000003.lua
 
-This repository include files such as:
+pics/
+├── 12538375.jpg
+├── 29071342.png
+└── 90000003.jpg
 
-```text
-cards-unofficial.cdb
-c29071342.lua
-c12538375.lua
-2010.03 Edison.lflist.conf
-12538375.jpg
-29071342.png
+lflists/
+└── 2010.03 Edison.lflist.conf
+
+server/
+└── README.md
 ```
 
 ## Installation
 
-Copy the provided files into your **Project Ignis / EDOPro** folder.
-
-Typical paths:
+Copy the following folders into your EDOPro/ProjectIgnis directory:
 
 ```text
-cards-unofficial.cdb  ->  ProjectIgnis/expansions/cards-unofficial.cdb
-.lua scripts          ->  ProjectIgnis/script/pre-errata
-.lflist.conf          ->  ProjectIgnis/lflists/
-card images           ->  ProjectIgnis/pics/
+expansions/
+script/
+pics/
+lflists/
 ```
 
-After copying the files, restart EDOPro.
+After copying the files, restart EDOPro/ProjectIgnis.
 
-In the deck editor, search for:
+## Important Compatibility Notice
 
-```text
-Armory Arm (Pre-Errata)
-Treeborn Frog (Pre-Errata)
-```
+These custom cards will only work correctly when all players are using the same card pack.
 
-or by their custom IDs:
+This means the pack is intended for:
 
-```text
-29071342
-12538375
-```
+1. **Local play**, where every local client has the same files installed.
+2. **Stardust Server**, once the server-side support is fully deployed and stable.
 
-## Important notes
+If a player does not have the same custom database, scripts, images, and banlist, the cards may appear incorrectly, fail to load, or behave differently.
 
-These files are intended for **Edison Format testing and casual play**.
+## Stardust Server
 
-All players in an online duel should use the same custom files. If only one player has the custom scripts or database entries, the duel may not load correctly or may behave inconsistently.
+The `server/` folder is reserved for future Stardust Server-related files and instructions.
 
-This project does not claim official support from Project Ignis or EDOPro.
+For now, this repository is focused on the public EDOPro/ProjectIgnis client pack. Server configuration files such as `user_configs.json` will be added later, once the Stardust Server setup is stable enough for public use.
 
-These files were tested on version 41.0.2 "Bagooska" of EDOPro.
+## Notes
 
-It's very likely that when you update EDOPro you will have to add those files again, so keep them.
+This project is unofficial and intended for preservation, testing, and casual Time Wizard play.
 
-Right now i keeped both of the versions, the modern and the errata of the cards, while more test are made with the errata versions, if you wanna duel random players you will probably need to use the non-errata version of the cards.
-
-
-
-## Current status
-
-- Armory Arm (Pre-Errata): added
-- Treeborn Frog (Pre-Errata): added and tested locally
-- Edison banlist adjustments: included
-- Additional Edison pre-errata fixes may be added later
-
-## Credits
-
-Original **Armory Arm (Pre-Errata)** implementation by **Geekoryuiai**.
-Original **Treeborn Frog (Pre-Errata)**  implementation by **Marquezdan**.
-This fork adds the **Treeborn Frog (Pre-Errata)** implementation and related Edison Format adjustments.
+It is not affiliated with Project Ignis, EDOPro, Konami, or any official Yu-Gi-Oh! product.
