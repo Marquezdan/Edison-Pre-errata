@@ -16,7 +16,7 @@ The goal is to make it easier to play Edison-format games using specific histori
 This pack is intended for use with:
 
 * EDOPro / ProjectIgnis
-* Stardust Edison Server
+* Stardust Server
 * Local casual testing
 * Edison / Time Wizard private games
 
@@ -69,7 +69,7 @@ After copying the files, reopen EDOPro/ProjectIgnis.
 
 ## Server Configuration
 
-The `server/` folder contains files to help you add the Stardust Edison Server to EDOPro/ProjectIgnis.
+The `server/` folder contains files to help you add the Stardust Server to EDOPro/ProjectIgnis.
 
 There are two options:
 
@@ -88,7 +88,7 @@ to your EDOPro/ProjectIgnis folder and replace your existing `user_configs.json`
 This file already includes:
 
 * Evolution Server
-* Stardust Edison Server
+* Stardust Server
 
 Before replacing your file, it is recommended to make a backup of your current `user_configs.json`.
 
@@ -106,11 +106,11 @@ Copy the Stardust server entry and add it manually to the `servers` list inside 
 
 After editing `user_configs.json`, restart EDOPro/ProjectIgnis.
 
-## Stardust Edison Server
+## Stardust Server
 
 ```json
 {
-  "name": "Stardust Edison Server",
+  "name": "Stardust Server",
   "address": "163.176.36.241",
   "duelport": 7911,
   "roomaddress": "163.176.36.241",
@@ -156,7 +156,7 @@ A ideia é facilitar partidas no formato Edison usando textos históricos espec�
 Este pacote é pensado para uso com:
 
 * EDOPro / ProjectIgnis
-* Stardust Edison Server
+* Stardust Server
 * Testes locais casuais
 * Partidas privadas Edison / Time Wizard
 
@@ -209,7 +209,7 @@ Depois de copiar os arquivos, abra novamente o EDOPro/ProjectIgnis.
 
 ## Configuração do Servidor
 
-A pasta `server/` contém arquivos para ajudar a adicionar o Stardust Edison Server ao EDOPro/ProjectIgnis.
+A pasta `server/` contém arquivos para ajudar a adicionar o Stardust Server ao EDOPro/ProjectIgnis.
 
 Existem duas opções:
 
@@ -228,7 +228,7 @@ para a pasta do seu EDOPro/ProjectIgnis e substitua o `user_configs.json` existe
 Esse arquivo já inclui:
 
 * Evolution Server
-* Stardust Edison Server
+* Stardust Server
 
 Antes de substituir o arquivo, é recomendado fazer backup do seu `user_configs.json` atual.
 
@@ -246,11 +246,11 @@ Copie a entrada do servidor Stardust e adicione manualmente na lista `servers` d
 
 Depois de editar o `user_configs.json`, reinicie o EDOPro/ProjectIgnis.
 
-## Stardust Edison Server
+## Stardust Server
 
 ```json
 {
-  "name": "Stardust Edison Server",
+  "name": "Stardust Server",
   "address": "163.176.36.241",
   "duelport": 7911,
   "roomaddress": "163.176.36.241",

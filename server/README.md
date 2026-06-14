@@ -9,7 +9,7 @@ Este README está disponível em inglês e português.
 
 ## Overview
 
-This folder contains configuration files to add the Stardust Edison Server to EDOPro/ProjectIgnis.
+This folder contains configuration files to add the Stardust Server to EDOPro/ProjectIgnis.
 
 The goal is to make the setup easier for players who do not want to manually edit JSON files.
 
@@ -35,7 +35,7 @@ to your EDOPro/ProjectIgnis folder and replace the existing `user_configs.json`.
 This file already includes:
 
 * Evolution Server
-* Stardust Edison Server
+* Stardust Server
 
 Recommended steps:
 
@@ -46,7 +46,7 @@ Recommended steps:
 4. Copy server/user_configs.json from this repository.
 5. Paste it into your EDOPro/ProjectIgnis folder.
 6. Reopen EDOPro/ProjectIgnis.
-7. Select Stardust Edison Server from the server list.
+7. Select Stardust Server from the server list.
 ```
 
 ## Option 2 - Manual Entry
@@ -65,7 +65,7 @@ Copy the Stardust server entry and add it to the `servers` list in your existing
 
 ```json
 {
-  "name": "Stardust Edison Server",
+  "name": "Stardust Server",
   "address": "163.176.36.241",
   "duelport": 7911,
   "roomaddress": "163.176.36.241",
@@ -91,7 +91,7 @@ If the server does not appear, check that:
 
 ## Visão Geral
 
-Esta pasta contém arquivos de configuração para adicionar o Stardust Edison Server ao EDOPro/ProjectIgnis.
+Esta pasta contém arquivos de configuração para adicionar o Stardust Server ao EDOPro/ProjectIgnis.
 
 A ideia é facilitar a instalação para jogadores que não querem editar arquivos JSON manualmente.
 
@@ -117,7 +117,7 @@ para a pasta do seu EDOPro/ProjectIgnis e substitua o `user_configs.json` existe
 Esse arquivo já inclui:
 
 * Evolution Server
-* Stardust Edison Server
+* Stardust Server
 
 Passo a passo recomendado:
 
@@ -128,7 +128,7 @@ Passo a passo recomendado:
 4. Copie o server/user_configs.json deste repositório.
 5. Cole ele na pasta do seu EDOPro/ProjectIgnis.
 6. Abra novamente o EDOPro/ProjectIgnis.
-7. Selecione Stardust Edison Server na lista de servidores.
+7. Selecione Stardust Server na lista de servidores.
 ```
 
 ## Opção 2 - Entrada Manual
@@ -147,7 +147,7 @@ Copie a entrada do servidor Stardust e adicione na lista `servers` do seu `user_
 
 ```json
 {
-  "name": "Stardust Edison Server",
+  "name": "Stardust Server",
   "address": "163.176.36.241",
   "duelport": 7911,
   "roomaddress": "163.176.36.241",
