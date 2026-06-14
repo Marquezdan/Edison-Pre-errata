@@ -1,0 +1,40 @@
+{
+"repos": [
+{
+"url": "https://github.com/ryoken08/CDBEsp",
+"repo_name": "Traducción a Español",
+"repo_path": "./config/languages/Español",
+"is_language": true,
+"language": "",
+"data_path": "",
+"should_update": true,
+"should_read": true
+},
+{
+"url": "https://github.com/termitaklk/lflist",
+"repo_name": "Formatos Evolution",
+"repo_path": "./repositories/evolution/lflists",
+"lflist_path": ".",
+"should_update": true,
+"should_read": true
+}
+],
+"servers": [
+{
+"name": "Evolution Server",
+"address": "server.evolutionygo.com",
+"duelport": 7911,
+"roomaddress": "server.evolutionygo.com",
+"roomlistprotocol": "http",
+"roomlistport": 7922
+},
+{
+"name": "Stardust Edison Server",
+"address": "163.176.36.241",
+"duelport": 7911,
+"roomaddress": "163.176.36.241",
+"roomlistprotocol": "http",
+"roomlistport": 7922
+}
+]
+}
