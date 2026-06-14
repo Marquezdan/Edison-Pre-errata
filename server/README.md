@@ -1,12 +1,16 @@
 # Stardust Server
 
-Esta pasta está reservada para arquivos e configurações futuras do servidor Stardust.
+This folder contains the Stardust Edison Server connection entry for EDOPro/ProjectIgnis.
 
-Por enquanto, este repositório é focado no pacote de arquivos para o cliente EDOPro/ProjectIgnis:
+## Server Entry
 
-- expansions/
-- script/
-- pics/
-- lflists/
+The server entry is available in:
 
-O `user_configs.json` e outros arquivos relacionados ao servidor serão adicionados futuramente, quando o servidor estiver estável.
+```text
+server/stardust-server-entry.json
+
+Important
+
+Do not replace your entire user_configs.json unless you know what you are doing.
+
+Instead, copy only the Stardust server entry and add it to the existing server list inside your EDOPro/ProjectIgnis user_configs.json.
