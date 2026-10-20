@@ -1,8 +1,0 @@
-{
-  "name": "Stardust Server",
-  "address": "163.176.36.241",
-  "duelport": 7911,
-  "roomaddress": "163.176.36.241",
-  "roomlistprotocol": "http",
-  "roomlistport": 7922
-}

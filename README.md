@@ -1,332 +1,75 @@
-# Edison Pre-Errata Pack / Pacote Edison Pré-Errata
+# Stardust — Pacote Edison / HAT pré-errata
 
-This README is available in English and Portuguese.
-Este README está disponível em inglês e português.
+**Português** · [English below](#english)
 
----
+## Como instalar (1 minuto)
 
-# English
+1. Feche o EDOPro.
+2. Aqui no GitHub, clique em **Code → Download ZIP** e extraia o arquivo.
+3. Abra a pasta extraída (`Edison-Pre-errata-main`) e **copie tudo o que está dentro dela**.
+4. Cole dentro da pasta do EDOPro (a pasta `ProjectIgnis`, onde fica o executável) e **aceite substituir todos os arquivos**.
+5. Abra o EDOPro de novo.
 
-## Overview
+Pronto: as cartas, as imagens, as banlists e o **Stardust Server** já aparecem no jogo.
 
-This repository contains an unofficial EDOPro/ProjectIgnis card pack focused on Edison / Time Wizard gameplay with selected pre-errata cards and custom fixes.
+> Repita esses passos sempre que o pacote for atualizado. Se uma atualização do EDOPro apagar as cartas, é só copiar de novo.
 
-The goal is to make it easier to play Edison-format games using specific historical card texts, including cards that behaved differently before later errata changes.
+## Jogando
 
-This pack is intended for use with:
+- Em **Online**, escolha o servidor **Stardust Server**.
+- Ao criar a sala, use a banlist **Stardust Edison** ou **Stardust HAT** e **Allowed Cards: All**.
+- O servidor aplica sozinho as regras do formato (Master Rule, tamanho dos decks, regra do 0 ATK etc.) e recusa salas criadas com listas Stardust desatualizadas. Se aparecer esse aviso, baixe o pacote de novo.
+- A banlist **2010.03 Edison OF** continua disponível para quem ainda não atualizou.
 
-* EDOPro / ProjectIgnis
-* Stardust Server
-* Local casual testing
-* Edison / Time Wizard private games
-
-## Contents
-
-```text
-expansions/
-  cards-unofficial.cdb
-
-script/
-  pre-errata/
-    custom card scripts
-
-pics/
-  custom card images
-
-lflists/
-  Stardust Edison, Stardust HAT and 2010.03 Edison OF banlists
-
-server/
-  user_configs.json
-  stardust-server-entry.json
-  README.md
-```
-
-## Included Custom / Pre-Errata Cards
-
-Stardust Edison and Stardust HAT banlists use these versions:
-
-| Card | Edison | HAT |
-| --- | --- | --- |
-| Treeborn Frog (Pre-Errata) | ✔ | ✔ |
-| Swap Frog (Pre-Errata) | ✔ | ✔ |
-| Armory Arm (Pre-Errata) | ✔ | |
-| Lord British Space Fighter (Pre-Errata) | ✔ | |
-| Necrovalley (Edison Pre-Errata) | ✔ | |
-| Necrovalley (Pre-Errata) | | ✔ |
-| Elemental HERO Prisma (Pre-Errata) | ✔ | |
-| Grandmaster of the Six Samurai (Pre-Errata) | ✔ | ✔ |
-| Fortune Lady Light (Pre-Errata) | ✔ | ✔ |
-| My Body as a Shield (Pre-Errata) | ✔ | ✔ |
-| Strike Ninja (Pre-Errata) | ✔ | ✔ |
-| Black Garden (Pre-Errata) | ✔ | ✔ |
-| Machina Gearframe (Pre-Errata) | ✔ | ✔ |
-| Destiny End Dragoon (Pre-Errata) | ✔ | ✔ |
-| Bujingi Turtle (Pre-Errata) | | ✔ |
-| Skull Meister (Pre-Errata) | | ✔ |
-| Effect Veiler (Pre-Errata) | | ✔ |
-
-## Banlists
-
-* `Stardust-Edison.lflist.conf` — **Stardust Edison** (official list for the group's tournaments)
-* `Stardust-HAT.lflist.conf` — **Stardust HAT** (official list for the group's tournaments)
-* `2010.03 Edison.lflist.conf` — **2010.03 Edison OF** (previous list, kept for players who have not updated yet)
-
-If you have an old file named `Stardust-Edison.lflist .conf` (with a space before `.conf`), delete it. Otherwise EDOPro loads two "Stardust Edison" lists.
-
-The Stardust Server applies the format rules automatically (Master Rule, deck sizes, 0 ATK rule, etc.) and refuses rooms created with outdated Stardust lists.
-
-## Installation
-
-Close EDOPro/ProjectIgnis before copying the files.
-
-Copy the files from this repository into your EDOPro/ProjectIgnis folder following this structure:
-
-```text
-expansions/cards-unofficial.cdb  ->  ProjectIgnis/expansions/cards-unofficial.cdb
-script/pre-errata/*.lua          ->  ProjectIgnis/script/
-pics/*                           ->  ProjectIgnis/pics/  (including pics/field/)
-lflists/*.conf                   ->  ProjectIgnis/lflists/
-```
-
-After copying the files, reopen EDOPro/ProjectIgnis.
-
-## Server Configuration
-
-The `server/` folder contains files to help you add the Stardust Server to EDOPro/ProjectIgnis.
-
-There are two options:
-
-### Option 1 - Full user_configs.json
-
-Use this if you want the easiest setup.
-
-Copy:
-
-```text
-server/user_configs.json
-```
-
-to your EDOPro/ProjectIgnis folder and replace your existing `user_configs.json`.
-
-This file already includes:
-
-* Evolution Server
-* Stardust Server
-
-Before replacing your file, it is recommended to make a backup of your current `user_configs.json`.
-
-### Option 2 - Manual Server Entry
-
-Use this if you do not want to replace your current config.
-
-Open:
-
-```text
-server/stardust-server-entry.json
-```
-
-Copy the Stardust server entry and add it manually to the `servers` list inside your existing `user_configs.json`.
-
-After editing `user_configs.json`, restart EDOPro/ProjectIgnis.
-
-## Stardust Server
-
-```json
-{
-  "name": "Stardust Server",
-  "address": "163.176.36.241",
-  "duelport": 7911,
-  "roomaddress": "163.176.36.241",
-  "roomlistprotocol": "http",
-  "roomlistport": 7922
-}
-```
-
-## Important Notes
-
-Both players must have the same card pack installed to properly use the custom/pre-errata cards.
-
-If a custom card is not working, check that:
-
-* `cards-unofficial.cdb` is inside the `expansions/` folder
-* The Lua scripts are inside the `script/` folder
-* The card images are inside the `pics/` folder
-* EDOPro/ProjectIgnis was restarted after copying the files
-
-When creating a room, use:
-
-```text
-Allowed Cards: All
-```
-
-This helps avoid issues with custom or unofficial cards being rejected by the client.
-
-## Disclaimer
-
-This is an unofficial fan-made pack for casual play.
-It is not affiliated with Konami, ProjectIgnis, EDOPro, or Evolution YGO.
-
----
-
-# Português
-
-## Visão Geral
-
-Este repositório contém um pacote não oficial de cartas para EDOPro/ProjectIgnis focado em partidas Edison / Time Wizard com cartas pré-errata e correções customizadas.
-
-A ideia é facilitar partidas no formato Edison usando textos históricos específicos de cartas que funcionavam de maneira diferente antes de erratas posteriores.
-
-Este pacote é pensado para uso com:
-
-* EDOPro / ProjectIgnis
-* Stardust Server
-* Testes locais casuais
-* Partidas privadas Edison / Time Wizard
-
-## Conteúdo
-
-```text
-expansions/
-  cards-unofficial.cdb
-
-script/
-  pre-errata/
-    scripts das cartas customizadas
-
-pics/
-  imagens das cartas customizadas
-
-lflists/
-  banlists Stardust Edison, Stardust HAT e 2010.03 Edison OF
-
-server/
-  user_configs.json
-  stardust-server-entry.json
-  README.md
-```
-
-## Cartas Custom / Pré-Errata Incluídas
-
-As banlists Stardust Edison e Stardust HAT usam estas versões:
+## Cartas incluídas
 
 | Carta | Edison | HAT |
-| --- | --- | --- |
-| Treeborn Frog (Pre-Errata) | ✔ | ✔ |
-| Swap Frog (Pre-Errata) | ✔ | ✔ |
-| Armory Arm (Pre-Errata) | ✔ | |
-| Lord British Space Fighter (Pre-Errata) | ✔ | |
-| Necrovalley (Edison Pre-Errata) | ✔ | |
-| Necrovalley (Pre-Errata) | | ✔ |
-| Elemental HERO Prisma (Pre-Errata) | ✔ | |
-| Grandmaster of the Six Samurai (Pre-Errata) | ✔ | ✔ |
-| Fortune Lady Light (Pre-Errata) | ✔ | ✔ |
-| My Body as a Shield (Pre-Errata) | ✔ | ✔ |
-| Strike Ninja (Pre-Errata) | ✔ | ✔ |
-| Black Garden (Pre-Errata) | ✔ | ✔ |
-| Machina Gearframe (Pre-Errata) | ✔ | ✔ |
-| Destiny End Dragoon (Pre-Errata) | ✔ | ✔ |
-| Bujingi Turtle (Pre-Errata) | | ✔ |
-| Skull Meister (Pre-Errata) | | ✔ |
-| Effect Veiler (Pre-Errata) | | ✔ |
+| --- | :---: | :---: |
+| Treeborn Frog | ✔ | ✔ |
+| Swap Frog | ✔ | ✔ |
+| Grandmaster of the Six Samurai | ✔ | ✔ |
+| Fortune Lady Light | ✔ | ✔ |
+| My Body as a Shield | ✔ | ✔ |
+| Strike Ninja | ✔ | ✔ |
+| Black Garden | ✔ | ✔ |
+| Machina Gearframe | ✔ | ✔ |
+| Destiny End Dragoon | ✔ | ✔ |
+| Armory Arm | ✔ | |
+| Lord British Space Fighter | ✔ | |
+| Elemental HERO Prisma | ✔ | |
+| Necrovalley (versão Edison) | ✔ | |
+| Necrovalley (versão HAT) | | ✔ |
+| Bujingi Turtle | | ✔ |
+| Skull Meister | | ✔ |
+| Effect Veiler | | ✔ |
 
-## Banlists
+No jogo elas aparecem com **(Pre-Errata)** no nome. Os dois jogadores precisam ter o pacote instalado.
 
-* `Stardust-Edison.lflist.conf` — **Stardust Edison** (lista oficial dos torneios do grupo)
-* `Stardust-HAT.lflist.conf` — **Stardust HAT** (lista oficial dos torneios do grupo)
-* `2010.03 Edison.lflist.conf` — **2010.03 Edison OF** (lista anterior, mantida para quem ainda não atualizou)
+O arquivo `config/user_configs.json` substitui a sua lista de servidores do EDOPro (ela fica com o Evolution Server e o Stardust Server). Se você tinha outros servidores cadastrados, cadastre-os de novo.
 
-Se você tiver um arquivo antigo chamado `Stardust-Edison.lflist .conf` (com espaço antes de `.conf`), apague-o. Caso contrário, o EDOPro carrega duas listas "Stardust Edison".
+Pacote não oficial feito por fãs, sem vínculo com Konami, Project Ignis, EDOPro ou Evolution YGO.
 
-O Stardust Server aplica as regras do formato automaticamente (Master Rule, tamanhos de deck, regra do 0 ATK etc.) e recusa salas criadas com listas Stardust desatualizadas.
+---
 
-## Instalação
+## English
 
-Feche o EDOPro/ProjectIgnis antes de copiar os arquivos.
+### How to install (1 minute)
 
-Copie os arquivos deste repositório para a pasta do seu EDOPro/ProjectIgnis seguindo esta estrutura:
+1. Close EDOPro.
+2. On GitHub, click **Code → Download ZIP** and extract it.
+3. Open the extracted folder (`Edison-Pre-errata-main`) and **copy everything inside it**.
+4. Paste it into your EDOPro folder (`ProjectIgnis`, where the executable is) and **replace all files**.
+5. Open EDOPro again.
 
-```text
-expansions/cards-unofficial.cdb  ->  ProjectIgnis/expansions/cards-unofficial.cdb
-script/pre-errata/*.lua          ->  ProjectIgnis/script/
-pics/*                           ->  ProjectIgnis/pics/  (including pics/field/)
-lflists/*.conf                   ->  ProjectIgnis/lflists/
-```
+Done: cards, images, banlists and the **Stardust Server** are ready. Repeat these steps whenever the pack is updated, or if an EDOPro update removes the cards.
 
-Depois de copiar os arquivos, abra novamente o EDOPro/ProjectIgnis.
+### Playing
 
-## Configuração do Servidor
+- In **Online**, pick **Stardust Server**.
+- Create the room with the **Stardust Edison** or **Stardust HAT** banlist and **Allowed Cards: All**.
+- The server enforces the format rules automatically and refuses rooms created with outdated Stardust banlists. If you see that message, download the pack again.
+- The **2010.03 Edison OF** banlist is still available for players who have not updated yet.
 
-A pasta `server/` contém arquivos para ajudar a adicionar o Stardust Server ao EDOPro/ProjectIgnis.
+`config/user_configs.json` replaces your EDOPro server list (Evolution Server and Stardust Server). Add any other servers again if you had them.
 
-Existem duas opções:
-
-### Opção 1 - user_configs.json completo
-
-Use esta opção se quiser a configuração mais simples.
-
-Copie:
-
-```text
-server/user_configs.json
-```
-
-para a pasta do seu EDOPro/ProjectIgnis e substitua o `user_configs.json` existente.
-
-Esse arquivo já inclui:
-
-* Evolution Server
-* Stardust Server
-
-Antes de substituir o arquivo, é recomendado fazer backup do seu `user_configs.json` atual.
-
-### Opção 2 - Entrada manual do servidor
-
-Use esta opção se você não quiser substituir sua configuração atual.
-
-Abra:
-
-```text
-server/stardust-server-entry.json
-```
-
-Copie a entrada do servidor Stardust e adicione manualmente na lista `servers` do seu `user_configs.json` atual.
-
-Depois de editar o `user_configs.json`, reinicie o EDOPro/ProjectIgnis.
-
-## Stardust Server
-
-```json
-{
-  "name": "Stardust Server",
-  "address": "163.176.36.241",
-  "duelport": 7911,
-  "roomaddress": "163.176.36.241",
-  "roomlistprotocol": "http",
-  "roomlistport": 7922
-}
-```
-
-## Observações Importantes
-
-Os dois jogadores precisam ter o mesmo pacote instalado para usar corretamente as cartas customizadas/pré-errata.
-
-Se uma carta customizada não funcionar, confira se:
-
-* `cards-unofficial.cdb` está dentro da pasta `expansions/`
-* Os scripts Lua estão dentro da pasta `script/`
-* As imagens das cartas estão dentro da pasta `pics/`
-* O EDOPro/ProjectIgnis foi reiniciado depois da cópia dos arquivos
-
-Ao criar uma sala, use:
-
-```text
-Allowed Cards: All
-```
-
-Isso ajuda a evitar problemas com cartas customizadas ou não oficiais sendo rejeitadas pelo cliente.
-
-## Aviso
-
-Este é um pacote não oficial feito por fãs para partidas casuais.
-Ele não é afiliado à Konami, ProjectIgnis, EDOPro ou Evolution YGO.
+Unofficial fan-made pack, not affiliated with Konami, Project Ignis, EDOPro or Evolution YGO.
