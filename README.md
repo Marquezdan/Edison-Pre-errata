@@ -34,7 +34,7 @@ pics/
   custom card images
 
 lflists/
-  Edison banlist files
+  Stardust Edison, Stardust HAT and 2010.03 Edison OF banlists
 
 server/
   user_configs.json
@@ -44,13 +44,37 @@ server/
 
 ## Included Custom / Pre-Errata Cards
 
-Current custom cards include:
+Stardust Edison and Stardust HAT banlists use these versions:
 
-* Treeborn Frog (Pre-Errata)
-* Armory Arm (Pre-Errata)
-* Lord British Space Fighter (Pre-Errata)
+| Card | Edison | HAT |
+| --- | --- | --- |
+| Treeborn Frog (Pre-Errata) | ✔ | ✔ |
+| Swap Frog (Pre-Errata) | ✔ | ✔ |
+| Armory Arm (Pre-Errata) | ✔ | |
+| Lord British Space Fighter (Pre-Errata) | ✔ | |
+| Necrovalley (Edison Pre-Errata) | ✔ | |
+| Necrovalley (Pre-Errata) | | ✔ |
+| Elemental HERO Prisma (Pre-Errata) | ✔ | |
+| Grandmaster of the Six Samurai (Pre-Errata) | ✔ | ✔ |
+| Fortune Lady Light (Pre-Errata) | ✔ | ✔ |
+| My Body as a Shield (Pre-Errata) | ✔ | ✔ |
+| Strike Ninja (Pre-Errata) | ✔ | ✔ |
+| Black Garden (Pre-Errata) | ✔ | ✔ |
+| Machina Gearframe (Pre-Errata) | ✔ | ✔ |
+| Destiny End Dragoon (Pre-Errata) | ✔ | ✔ |
+| Bujingi Turtle (Pre-Errata) | | ✔ |
+| Skull Meister (Pre-Errata) | | ✔ |
+| Effect Veiler (Pre-Errata) | | ✔ |
 
-More cards and fixes may be added later.
+## Banlists
+
+* `Stardust-Edison.lflist.conf` — **Stardust Edison** (official list for the group's tournaments)
+* `Stardust-HAT.lflist.conf` — **Stardust HAT** (official list for the group's tournaments)
+* `2010.03 Edison.lflist.conf` — **2010.03 Edison OF** (previous list, kept for players who have not updated yet)
+
+If you have an old file named `Stardust-Edison.lflist .conf` (with a space before `.conf`), delete it. Otherwise EDOPro loads two "Stardust Edison" lists.
+
+The Stardust Server applies the format rules automatically (Master Rule, deck sizes, 0 ATK rule, etc.) and refuses rooms created with outdated Stardust lists.
 
 ## Installation
 
@@ -61,7 +85,7 @@ Copy the files from this repository into your EDOPro/ProjectIgnis folder followi
 ```text
 expansions/cards-unofficial.cdb  ->  ProjectIgnis/expansions/cards-unofficial.cdb
 script/pre-errata/*.lua          ->  ProjectIgnis/script/
-pics/*                           ->  ProjectIgnis/pics/
+pics/*                           ->  ProjectIgnis/pics/  (including pics/field/)
 lflists/*.conf                   ->  ProjectIgnis/lflists/
 ```
 
@@ -174,7 +198,7 @@ pics/
   imagens das cartas customizadas
 
 lflists/
-  arquivos de banlist Edison
+  banlists Stardust Edison, Stardust HAT e 2010.03 Edison OF
 
 server/
   user_configs.json
@@ -184,13 +208,37 @@ server/
 
 ## Cartas Custom / Pré-Errata Incluídas
 
-As cartas customizadas atuais incluem:
+As banlists Stardust Edison e Stardust HAT usam estas versões:
 
-* Treeborn Frog (Pre-Errata)
-* Armory Arm (Pre-Errata)
-* Lord British Space Fighter (Pre-Errata)
+| Carta | Edison | HAT |
+| --- | --- | --- |
+| Treeborn Frog (Pre-Errata) | ✔ | ✔ |
+| Swap Frog (Pre-Errata) | ✔ | ✔ |
+| Armory Arm (Pre-Errata) | ✔ | |
+| Lord British Space Fighter (Pre-Errata) | ✔ | |
+| Necrovalley (Edison Pre-Errata) | ✔ | |
+| Necrovalley (Pre-Errata) | | ✔ |
+| Elemental HERO Prisma (Pre-Errata) | ✔ | |
+| Grandmaster of the Six Samurai (Pre-Errata) | ✔ | ✔ |
+| Fortune Lady Light (Pre-Errata) | ✔ | ✔ |
+| My Body as a Shield (Pre-Errata) | ✔ | ✔ |
+| Strike Ninja (Pre-Errata) | ✔ | ✔ |
+| Black Garden (Pre-Errata) | ✔ | ✔ |
+| Machina Gearframe (Pre-Errata) | ✔ | ✔ |
+| Destiny End Dragoon (Pre-Errata) | ✔ | ✔ |
+| Bujingi Turtle (Pre-Errata) | | ✔ |
+| Skull Meister (Pre-Errata) | | ✔ |
+| Effect Veiler (Pre-Errata) | | ✔ |
 
-Mais cartas e correções podem ser adicionadas futuramente.
+## Banlists
+
+* `Stardust-Edison.lflist.conf` — **Stardust Edison** (lista oficial dos torneios do grupo)
+* `Stardust-HAT.lflist.conf` — **Stardust HAT** (lista oficial dos torneios do grupo)
+* `2010.03 Edison.lflist.conf` — **2010.03 Edison OF** (lista anterior, mantida para quem ainda não atualizou)
+
+Se você tiver um arquivo antigo chamado `Stardust-Edison.lflist .conf` (com espaço antes de `.conf`), apague-o. Caso contrário, o EDOPro carrega duas listas "Stardust Edison".
+
+O Stardust Server aplica as regras do formato automaticamente (Master Rule, tamanhos de deck, regra do 0 ATK etc.) e recusa salas criadas com listas Stardust desatualizadas.
 
 ## Instalação
 
@@ -201,7 +249,7 @@ Copie os arquivos deste repositório para a pasta do seu EDOPro/ProjectIgnis seg
 ```text
 expansions/cards-unofficial.cdb  ->  ProjectIgnis/expansions/cards-unofficial.cdb
 script/pre-errata/*.lua          ->  ProjectIgnis/script/
-pics/*                           ->  ProjectIgnis/pics/
+pics/*                           ->  ProjectIgnis/pics/  (including pics/field/)
 lflists/*.conf                   ->  ProjectIgnis/lflists/
 ```
 

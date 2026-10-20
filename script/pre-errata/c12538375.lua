@@ -18,9 +18,9 @@ function s.initial_effect(c)
 	e1:SetOperation(s.operation)
 	c:RegisterEffect(e1)
 end
-s.listed_names={id}
+s.listed_names={12538374}
 function s.filter(c)
-	return c:IsSpellTrap() or (c:IsCode(id) and c:IsFaceup())
+	return c:IsSpellTrap() or (c:IsCode(12538374) and c:IsFaceup()) --alias cards are read as 12538374 by the core
 end
 function s.condition(e,tp,eg,ep,ev,re,r,rp)
 	return tp==Duel.GetTurnPlayer() and not Duel.IsExistingMatchingCard(s.filter,tp,LOCATION_ONFIELD,0,1,nil) 
